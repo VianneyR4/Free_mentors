@@ -8,6 +8,6 @@ window.onload = function() {
         menu.style = "bottom: 0%";
     });
     hideEvent.addEventListener("click", function() {
-        menu.style = "bottom: 100%";
+        menu.style = "bottom: 100.5%";
     });
 }
