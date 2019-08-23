@@ -1,0 +1,708 @@
+body {
+    width: 100%;
+    margin: 0px;
+    background-image: url('/images/Background-02.jpg');
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    font-family: 'Montserrat', "Open Sans", Gotham, gotham, Tahoma, Geneva, sans-serif;
+    color: #646464;
+}
+
+header {
+    width: 64%;
+    margin: auto 0% auto 250px;
+    padding: 20px 8px;
+}
+
+.title {
+    display: inline-block;
+    width: 50%;
+}
+
+.user-right {
+    display: inline-block;
+    width: 40%;
+    float: right;
+    text-align: right;
+}
+
+.title .title_spane {
+    font-size: 2em;
+    color: #444;
+}
+
+.user-right img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    object-fit: cover;
+}
+
+.user-right .name {
+    display: inline-block;
+    float: right;
+    padding: 15px 10px;
+}
+
+.user-right .name .drop-down {
+    font-weight: 900;
+}
+
+.section {
+    width: 90.5%;
+}
+
+.nav {
+    width: 250px;
+    position: fixed;
+}
+
+.nav ul li {
+    display: block;
+    list-style: none;
+    padding: 15px 0;
+}
+
+.nav ul li a.hh {
+    font-size: 18px;
+    color: #2e2e2e;
+}
+
+.nav ul li a.hh:hover {
+    color: #2e2e2e;
+}
+
+.nav ul li a.hh img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 5px 10px -7px -10px;
+}
+
+.nav ul li a img {
+    width: 20px;
+    margin: 5px 10px -4px 0px;
+}
+
+.nav ul li a {
+    color: #646464;
+    text-decoration: none;
+}
+
+.nav ul li a:hover {
+    color: #e07115;
+}
+
+.nav ul li a.active {
+    color: #e07115;
+}
+
+
+/* ------- mobil nav and responsiv------ */
+
+.mobile-nav {
+    width: 100%;
+    display: none;
+    background: #fff;
+    box-shadow: 1px 3px 8px #380d0d27;
+    z-index: 9;
+}
+
+.mobile-nav ul li {
+    display: inline-block;
+    margin: -10px 10px 0px;
+}
+
+.f-right {
+    float: right;
+}
+
+.small-show ul li.f-right {
+    margin: -8px 6% 10px 10px;
+}
+
+.small-show ul li.f-right a {
+    background-image: linear-gradient(to right, #ff6f1c 20%, #e92f2f 100%);
+    padding: 5px 15px 8px;
+    color: #fff;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+.small-show ul li.f-right a:hover {
+    box-shadow: 1px 3px 6px #3f0b0b52;
+}
+
+.small-show ul li.f-right a:active {
+    background: #fff;
+    color: #e07115;
+}
+
+.dsplay-md {
+    display: none;
+}
+
+#menu_to_show {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    bottom: 100%;
+    transition: 1s;
+    background-color: #201206c7;
+    z-index: 99;
+}
+
+#menu_to_show center {
+    margin-left: -5%;
+    background-color: #fff;
+    margin-top: -20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #969595;
+    box-shadow: 1px 5px 15px #000000b7;
+}
+
+#menu_to_show .cancel {
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 1040px) {
+    .nav {
+        display: none;
+    }
+    header {
+        width: 96%;
+        margin: auto 2%;
+        padding: 20px 8px;
+    }
+    .mobile-nav {
+        display: block;
+    }
+    .dsplay-md {
+        display: block;
+    }
+    .small-show {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 725px) {
+    .mobile-nav {
+        display: none;
+    }
+    .small-show {
+        display: block;
+    }
+    #menu_to_show {
+        display: block;
+    }
+}
+
+
+/* ------- end mobil nav and responsiv------ */
+
+
+/* ------ start User-info ------ */
+
+
+/* ******petite nav***** */
+
+.link-nav {
+    padding: 5px 20px;
+}
+
+.link-nav a.h1 {
+    color: #111111;
+}
+
+.link-nav a {
+    color: #777777;
+    text-decoration: none;
+}
+
+.link-nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* ******end petite nav***** */
+
+.scroll {
+    /* background-color: #5f5f5f1e; */
+    width: 67%;
+    position: absolute;
+    top: 100px;
+    margin-left: 250px;
+    border-radius: 20px;
+}
+
+.user-info {
+    top: 100px;
+    border-radius: 20px;
+}
+
+.cont-left {
+    background-color: #5f5f5f1e;
+    border-radius: 20px;
+    padding: 25px 2.5% 0px;
+    display: inline-block;
+    width: 41.5%;
+    min-width: 290px;
+    margin-bottom: 30px;
+}
+
+.cont-right {
+    background-color: #5f5f5f1e;
+    border-radius: 20px;
+    padding: 25px 2.5% 0px;
+    display: inline-block;
+    width: 43.5%;
+    float: right;
+    min-width: 290px;
+    margin-bottom: 30px;
+}
+
+#myprofil {
+    width: 98%;
+    margin: 0px auto 35px;
+    background-color: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 1px 5px 25px #79787875;
+}
+
+#myaccount,
+#myother {
+    width: 98%;
+    margin: 0px auto 35px;
+    background-color: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 1px 5px 25px #79787875;
+}
+
+#myprofil img {
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+    height: 230px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.cont-right .tit-contet {
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.tit-contet {
+    color: #222;
+    font-size: 1em;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+}
+
+.tit-contet small {
+    float: right;
+    color: #aca8a8;
+}
+
+#myprofil input {
+    padding: 5px;
+    width: 38%;
+    margin: 5px 10px 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+    outline-color: #ff8018;
+    color: #918d8d;
+}
+
+#myprofil input::placeholder {
+    color: #cacaca;
+}
+
+#myprofil input[placeholder=name] {
+    /* float: left; */
+}
+
+#myprofil input[placeholder=tel] {
+    /* float: right; */
+}
+
+#myprofil input[type=mail] {
+    width: 87%;
+}
+
+#myprofil form p {
+    margin: 10px 15px;
+    text-align: left;
+}
+
+#myprofil form p a {
+    font-size: 14px;
+    color: #e07115;
+    text-decoration: none;
+}
+
+#myprofil form p a:hover {
+    color: #e01585;
+}
+
+#myprofil form {
+    text-align: center;
+}
+
+button[type="submit"].btn {
+    padding: 10px 25px;
+}
+
+.btn {
+    margin: 0px 0px 20px;
+    text-align: center;
+    padding: 8px 20px;
+    border: none;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #ff6f1c 20%, #e92f2f 100%);
+}
+
+small#etiquet {
+    background-image: linear-gradient(to right, #5af700 20%, #d6e92f 100%);
+    padding: 2px 5px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 11px;
+}
+
+.tit-contet small {
+    background: #e4e1e1;
+    padding: 7px 15px;
+    border-radius: 15px;
+    color: rgb(124, 124, 124);
+    font-size: 12.5px;
+    margin-top: -5px;
+}
+
+@media screen and (max-width: 1040px) {
+    .scroll {
+        width: 96%;
+        top: 100px;
+        margin: 10px 2%;
+    }
+}
+
+@media screen and (max-width: 695px) {
+    .cont-left {
+        width: 90%;
+        display: block;
+        margin: auto 2% 25px;
+        padding-bottom: 0.5px;
+    }
+    .cont-right {
+        width: 90%;
+        display: block;
+        float: none;
+        margin: auto 2% 25px;
+        padding-bottom: 0.5px;
+    }
+}
+
+
+/* ----- body_myacc ---- */
+
+#body_myacc {
+    padding: 2px 20px 25px;
+}
+
+#body_myacc .line1 {
+    margin: 15px 0px;
+}
+
+#body_myacc .line1 div#left {
+    display: inline-block;
+    font-size: 13.4px;
+    color: #a7a4a4;
+}
+
+#body_myacc .line1 div#right {
+    display: inline-block;
+    padding-top: 8px;
+    font-size: 13px;
+    float: right;
+}
+
+#body_myacc .line1 div#left span {
+    font-size: 14.5px;
+    color: #535353;
+}
+
+#body_myacc .line1 div#left img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: inline-block;
+    margin: -5px 10px 0px 0px;
+    border: 2px solid #e07115;
+}
+
+#body_myacc .line1 div#left #petit_div {
+    display: inline-block;
+    float: right;
+}
+
+.more {
+    border-top: 1px solid #e7e7e7;
+    padding: 10px;
+    text-align: center;
+}
+
+.link-more {
+    color: #e07115;
+    text-decoration: none;
+}
+
+.link-more:hover {
+    color: #e01585;
+}
+
+
+/* ===================================
+======================================
+========= Mentors view page ==========
+=================================== */
+
+#scroll {
+    max-width: 900px;
+    width: 73%;
+    position: absolute;
+    top: 100px;
+    margin-left: 250px;
+    border-radius: 20px;
+}
+
+.mentor {
+    display: inline-block;
+    width: 43%;
+    min-width: 350px;
+    background-color: #5f5f5f1e;
+    border-radius: 20px;
+    padding: 18px 2% 22px;
+    margin: 10px 10px 13px 5px;
+}
+
+.mentor-content {
+    background: #fff;
+    border-radius: 120px 15px 120px 15px;
+    box-shadow: 1px 5px 20px #79787875;
+}
+
+.mentor-content img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: inline-block;
+    margin-right: 2%;
+}
+
+.mentor-content span {
+    display: inline-block;
+    width: 60%;
+}
+
+.mentor-content span div#ht {
+    border-bottom: #c9c5c5 1px solid;
+    padding: 5px 10px 5px 0px;
+    margin-bottom: -15px;
+    color: #414040;
+    width: 100%;
+}
+
+.mentor-content span p {
+    color: #969595;
+}
+
+.mentor-content span a.btn {
+    font-size: 14px;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.request {
+    background-image: linear-gradient(to right, #5af700 20%, #d6e92f 100%);
+}
+
+.notif {
+    background-image: linear-gradient(to right, #5af700 20%, #d6e92f 100%);
+    padding: 3px 5px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    width: 50px;
+}
+
+@media screen and (max-width: 1110px) and (min-width: 1040px) {
+    .mentor {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    #scroll {
+        width: 96%;
+        margin: 0px 2%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .mentor {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    header .title {
+        display: none;
+    }
+    header .user-right {
+        width: 100%;
+        text-align: left;
+    }
+    header .user-right img {
+        float: left;
+    }
+    header .user-right .name {
+        float: none;
+    }
+}
+
+
+/* ===========================
+======== mentor-view =========
+=========================== */
+
+.mentor-view {
+    width: 90%;
+    min-width: 350px;
+    background-color: #5f5f5f1e;
+    border-radius: 20px;
+    padding: 30px 4% 32px;
+    margin: 0px 0px 15px;
+}
+
+.view-content {
+    background-image: linear-gradient(to top right, #f53131 0%, #fd7f2b 50%, #fcbc32 100%);
+    border-radius: 250px 15px 15px;
+    box-shadow: 1px 5px 20px #79787875;
+}
+
+.view-content img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: inline-block;
+    margin-right: 2%;
+    float: left;
+}
+
+.view-content span {
+    display: inline-block;
+    width: 50%;
+    padding: 0px 20px 0px 40px;
+    margin: 20px 0px 35px;
+    background-color: #fff;
+    box-shadow: 1px 5px 10px #3f0b0b52;
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 760px) {
+    .view-content span {
+        width: 80%;
+        padding: 0px 10%;
+    }
+}
+
+.view-content span div#ht {
+    padding: 5px 10px 5px 0px;
+    margin: 35px 0px 10px 0px;
+    color: #414040;
+    width: 100%;
+    font-size: 30px;
+}
+
+.view-content span p {
+    color: #969595;
+    font-size: 18px;
+}
+
+.view-content span a.btn {
+    font-size: 16px;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 500px;
+}
+
+.mentor-view-coment #title {
+    width: 93%;
+}
+
+.mentor-view-coment #title .mentor-content {
+    border-radius: 120px;
+}
+
+.mentor-view-coment .comment textarea {
+    width: 93%;
+    border-radius: 50px;
+    padding: 5px 20px;
+    outline: none;
+    border: none;
+    background: #5f5f5f10;
+}
+
+.mentor-view-coment .comment textarea::placeholder {
+    color: #b1afaf;
+}
+
+.mentor-view-coment #comment .mentor-content {
+    border-radius: 120px 15px 15px 120px;
+}
+
+.mentor-view-coment #comment .mentor-content .notif {
+    margin-top: 31px;
+}
+
+i.cancel {
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    overflow: hidden;
+    float: right;
+    margin: -10px -10px 0px 0px;
+    transition: 300ms;
+}
+
+i.cancel:hover {
+    background-image: linear-gradient(to top right, #f53131 0%, #fd7f2b 50%, #fcbc32 100%);
+    box-shadow: 1px 5px 10px #380d0d27;
+    cursor: pointer;
+    transition: 300ms;
+    margin: -15px -15px 0px 0px;
+}
+
+i.cancel:active {
+    background: #fff;
+}
+
+i.cancel img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: 5s;
+}
