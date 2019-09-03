@@ -1,0 +1,45 @@
+
+/* ======= swish permission user mentor or admin ======== */
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+#myName{
+    cursor: pointer;
+    width: 310px;
+    margin: -2px 0px 0px 20px;
+    outline-color: #e66419;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 150px;
+    text-align: center;
+    right: -170px;
+    top: -130px;
+    overflow: auto;
+    box-shadow: 1px 5px 15px #380d0d21;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: #201206b0;
+    padding: 20px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {
+      background-color: #efefef60;
+      color: #e66419;
+    }
+  
+  .show {
+      display: block;
+    }
+
+/* ============= end swish ================= */
