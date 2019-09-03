@@ -25,7 +25,7 @@
                 <a href="accept-decline.html"><img src="../images/icons/icons8_Add_New_20px.png">User Requests</a>
             </li>
             <li>
-                <a href="#"><img src="../images/icons/icons8_Settings_20px_1.png">Settings</a>
+                <a href="setting-mentor.html"><img src="../images/icons/icons8_Settings_20px_1.png">Settings</a>
             </li>
         </ul>
     </div>
@@ -58,7 +58,7 @@
                     <a href="accept-decline.html"><img src="../images/icons/icons8_Add_New_20px.png">User Requests</a>
                 </li>
                 <li>
-                    <a href="#"><img src="../images/icons/icons8_Settings_20px_1.png">Settings</a>
+                    <a href="setting-mentor.html"><img src="../images/icons/icons8_Settings_20px_1.png">Settings</a>
                 </li>
             </ul>
             <i class="cancel" id="hide_menu"><img src="../images/icons/icons8_Delete_26px.png"></i>
@@ -75,10 +75,13 @@
             <span class="title_spane">Mentor account</span><br/>
             <small>Welcome to Free Mentors</small>
         </div>
-        <div class="user-right">
+        <div class="user-right dropdown">
             <img src="../images/profil-1.jpg" alt="username + profil-pic">
-            <div class="name">
+            <div class="name dropbtn" id="myName">
                 Vianney Rwicha <span class="drop-down">&#8623;</span>
+            </div>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="log-in.html">logout</a>
             </div>
         </div>
     </header>
@@ -97,7 +100,7 @@
                     <a href="accept-decline.html"><img src="../images/icons/icons8_Add_New_20px.png">User Requests</a>
                 </li>
                 <li>
-                    <a href="#"><img src="../images/icons/icons8_Settings_20px_1.png">Settings</a>
+                    <a href="setting-mentor.html"><img src="../images/icons/icons8_Settings_20px_1.png">Settings</a>
                 </li>
             </ul>
         </div>
@@ -128,7 +131,7 @@
                             <input type="text" name="" placeholder="name" value="Sonia Olela" required />
                             <input type="text" name="" placeholder="tel" value="+250 784 726 619" required /><br/>
                             <input type="mail" name="" placeholder="mail" value="soniaolela@gmail.com" required />
-                            <p><a href="#"> Go to settings</a></p>
+                            <p><a href="setting-mentor.html"> Go to settings</a></p>
                             <button type="submit" class="btn">Save</button>
                         </form>
                     </div>
@@ -146,7 +149,7 @@
                                     <span>My pseudo account</span><br/> Soniaol7
                                 </div>
                                 <div id="right">
-                                    <a class="btn request">Change</a>
+                                    <a class="btn request" href="setting-mentor.html">Change</a>
                                 </div>
                             </div>
                             <div class="line1">
@@ -154,7 +157,7 @@
                                     <span>Active account</span><br/> ID: 348625
                                 </div>
                                 <div id="right">
-                                    <a class="btn">Block account</a>
+                                    <a class="btn danger">Block account •</a>
                                 </div>
                             </div>
                         </div>
@@ -174,7 +177,7 @@
                                     </div>
                                 </div>
                                 <div id="right">
-                                    <a class="btn">View All</a>
+                                    <a class="btn" href="">View All</a>
                                 </div>
                             </div>
                             <div class="line1">
@@ -233,7 +236,7 @@
         </div>
     </section>
 
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

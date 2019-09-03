@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/png" href="../images/icons/favicon.jpg">
     <link rel="stylesheet" type="text/css" href="../css/for-login.css">
+    <link rel="stylesheet" type="text/css" href="../css/dropdown-style.css">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <title>Free Mentors</title>
 </head>
@@ -36,25 +37,36 @@
                 <h1><span>USER</span> LOGIN</h1>
                 <img class="myimg" src="../images/icons/Person-Icon.jpg">
             </div>
-            <form action="user-home.html">
+            <form action="#user-home.html">
                 <input class="input block" type="text" name="" placeholder="Pseudo" />
                 <input class="input block" type="password" name="" placeholder="Password" />
                 <!-- <br/> -->
-                <button class="btn btn-outline block" type="submit">Login</button>
+                <!-- <button class="btn btn-outline block" type="submit">Login</button> -->
+
+                <div class="user-right dropdown">
+                    <button class="btn btn-outline block dropbtn" id="myName">Login</button>
+                    <div id="myDropdown" class="dropdown-content">
+                    <a href="user-home.html">As a User</a>
+                    <a href="account-mentor.html">As a Mentor</a>
+                    <a href="admin.html">As an Admin</a>
+                    </div>
+                </div>
+                
+
             </form>
         </div>
     </section>
-
-
 
     <br/><br/><br/>
     <br/><br/><br/>
 
     <footer>
-        <div class="copy-r align-center">
+        <div class="copy-r align-center" id="fixed">
             Copyright &copy; 2019 Free Mentors All Right Reserve
         </div>
     </footer>
+    
+    <script src="../js/dropdown.js"></script>
 </body>
 
 </html>
