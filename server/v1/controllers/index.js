@@ -25,25 +25,25 @@ const controller = {
           status: 400,
           error: result.error.details[0].message,
         });
-      return;
-    }
-    const verifEmail = data_storage.findEmailUser(req, res);
-    if (!verifEmail) {
-      if (req.body.password === req.body.confirmPassword) {
-        data_storage.save(req, res);
+    } else {
+      const verifEmail = data_storage.findEmailUser(req, res);
+      if (!verifEmail) {
+        if (req.body.password === req.body.confirmPassword) {
+          data_storage.save(req, res);
+        } else {
+          res.status(401)
+            .send({
+              status: 401,
+              error: 'The first password is not the same to the second!',
+            });
+        }
       } else {
-        res.status(401)
+        res.status(409)
           .send({
-            status: 401,
-            error: 'The first password is not the same to the second!',
+            status: 409,
+            error: 'Email already exist!',
           });
       }
-    } else {
-      res.status(409)
-        .send({
-          status: 409,
-          error: 'Email already exist!',
-        });
     }
   },
 
@@ -122,7 +122,7 @@ const controller = {
       allMentors,
     });
   },
-  
+
   specific_mentor(req, res) {
     const thismentors = data_storage.selectMentorByParams(req, res);
 
