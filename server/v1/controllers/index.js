@@ -227,6 +227,21 @@ const controller = {
         });
     }
   },
+  
+  mentorViewAllMSR(req, res) {
+    const verifMentorExist = data_storage.selectMentorByParams(req);
+    if (verifMentorExist) {
+      const viewMyMSR = data_storage.selectAllMSR(req);
+      res.status(200).send({ status: 200, message: 'All your Mentorship session request', viewMyMSR });
+    } else {
+      res.status(404)
+        .send({
+          status: 404,
+          message: 'The mentor with the given ID was not found',
+        });
+    }
+  },
+
 
 };
 
