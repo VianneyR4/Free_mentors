@@ -123,6 +123,25 @@ const controller = {
     });
   },
   
+  specific_mentor(req, res) {
+    const thismentors = data_storage.selectMentorByParams(req, res);
+
+    if (!thismentors) {
+      res.status(401)
+        .send({
+          status: 401,
+          message: 'The mentor with the given ID was not found',
+        });
+    } else {
+      res.status(200)
+        .send({
+          status: 200,
+          message: 'User connected successfully',
+          thismentors,
+        });
+    }
+  },
+
 };
 
 export default controller;
