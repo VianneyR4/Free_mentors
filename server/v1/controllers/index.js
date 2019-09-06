@@ -47,6 +47,48 @@ const controller = {
     }
   },
 
+  userlogin(req, res) {
+    const validUser = {
+      email: Joi.string().email().min(3).required(),
+      password: Joi.string().min(6).max(24).required(),
+    };
+    const result = Joi.validate(req.body, validUser);
+    if (result.error) {
+      res.status(401)
+        .send({
+          status: 401,
+          error: result.error.details[0].message,
+        });
+      return;
+    }
+    const user = data_storage.findEmailUser(req, res);
+    if (user) {
+      bcrypt.compare(req.body.password, user.password, (err, success) => {
+        if (success) {
+          const token = jwt.sign({ user }, process.env.mySecretKey);
+          res.status(200)
+            .send({
+              status: 200,
+              message: 'User connected successfully',
+              data: { token, user },
+            });
+        } else {
+          res.status(401)
+            .send({
+              status: 401,
+              error: 'Incorrect password!',
+            });
+        }
+      });
+    } else {
+      res.status(401)
+        .send({
+          status: 401,
+          error: 'Email doesn\'t exist!',
+        });
+    }
+  },
+
 };
 
 export default controller;
