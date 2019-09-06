@@ -178,7 +178,42 @@ const controller = {
     }
   },
 
-  
+  mentorAccept_Decline(req, res) {
+    const verifMentorExist = data_storage.selectMentorByParams(req);
+    if (verifMentorExist) {
+      const oneMSRToUpdate = data_storage.oneMSR(req);
+      if (oneMSRToUpdate) {
+        if (oneMSRToUpdate.answer !== 'accept') {
+          oneMSRToUpdate.answer = 'accept';
+          res.status(200).send({
+            status: 200,
+            message: 'Accepted successfully',
+            oneMSRToUpdate,
+          });
+        } else if (oneMSRToUpdate.answer !== 'decline') {
+          oneMSRToUpdate.answer = 'decline';
+          res.status(200).send({
+            status: 200,
+            message: 'Declined successfully',
+            oneMSRToUpdate,
+          });
+        } else {
+          res.status(401)
+            .send({
+              status: 401,
+              message: 'Action already passed',
+            });
+        }
+      }
+    } else {
+      res.status(404)
+        .send({
+          status: 404,
+          message: 'The mentor with the given params.id was not found',
+        });
+    }
+  },
+
 };
 
 export default controller;
