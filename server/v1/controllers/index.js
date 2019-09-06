@@ -88,7 +88,7 @@ const controller = {
         });
     }
   },
-  
+
   userToMentor(req, res) {
     const userToChange = data_storage.findIdUser(req, res);
     if (!userToChange) {
@@ -113,6 +113,16 @@ const controller = {
         });
     }
   },
+
+  canViewAllMentors(req, res) {
+    const allMentors = data_storage.selectAllMentors();
+    res.send({
+      status: 200,
+      message: 'selected successfully!',
+      allMentors,
+    });
+  },
+  
 };
 
 export default controller;
