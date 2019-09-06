@@ -88,7 +88,31 @@ const controller = {
         });
     }
   },
-
+  
+  userToMentor(req, res) {
+    const userToChange = data_storage.findIdUser(req, res);
+    if (!userToChange) {
+      res.status(404)
+        .send({
+          status: 404,
+          message: 'The user with the given ID was not found',
+        });
+    } else if (userToChange.status === 'mentee') {
+      userToChange.status = 'mentor';
+      res.status(200)
+        .send({
+          status: 200,
+          message: 'User change to mentor successfully!',
+          userToChange,
+        });
+    } else {
+      res.status(401)
+        .send({
+          status: 401,
+          message: 'Already a mentor',
+        });
+    }
+  },
 };
 
 export default controller;
