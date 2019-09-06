@@ -227,7 +227,7 @@ const controller = {
         });
     }
   },
-  
+
   mentorViewAllMSR(req, res) {
     const verifMentorExist = data_storage.selectMentorByParams(req);
     if (verifMentorExist) {
@@ -242,6 +242,45 @@ const controller = {
     }
   },
 
+  updateInfo(req, res) {
+    const validUser = {
+      firstName: Joi.string().alphanum().min(4).required(),
+      lastName: Joi.string().alphanum().min(4).required(),
+      address: Joi.string().min(4).required(),
+      expertise: Joi.string().min(4).required(),
+      password: Joi.string().min(6).max(24).required(),
+    };
+    const result = Joi.validate(req.body, validUser);
+    if (result.error) {
+      res.status(400)
+        .send({
+          status: 400,
+          error: result.error.details[0].message,
+        });
+      return;
+    }
+    const verifUserExist = data_storage.findIdUser(req);
+    if (verifUserExist) {
+      // eslint-disable-next-line no-unused-expressions
+      verifUserExist.firstName = req.body.firstName,
+      verifUserExist.lastName = req.body.lastName,
+      verifUserExist.address = req.body.address,
+      verifUserExist.expertise = req.body.expertise,
+      verifUserExist.password = req.body.password;
+      res.status(201)
+        .send({
+          status: 201,
+          message: 'Mentorship session created successfully',
+          verifUserExist,
+        });
+    } else {
+      res.status(404)
+        .send({
+          status: 404,
+          message: 'The user with the given params.id was not found',
+        });
+    }
+  },
 
 };
 
