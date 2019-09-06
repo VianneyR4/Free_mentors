@@ -41,9 +41,3 @@
   },
   "homepage": "https://github.com/VianneyR4/Free_mentors#readme"
 }
-
-
-
-npm install bcrypt chai chai-http config dotenv eslint joi jsonwebtoken mocha
-
-npm install --save-dav babel-cli babel-preset-env babel-watch eslint-config-airbnb eslint-config-airbnb-base eslint-plugin-import
