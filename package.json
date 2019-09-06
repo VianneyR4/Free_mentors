@@ -1,0 +1,49 @@
+{
+  "name": "work",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec babel-node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "config": "^3.2.2",
+    "dotenv": "^8.1.0",
+    "eslint": "^6.3.0",
+    "express": "^4.17.1",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^6.2.0",
+    "moment": "^2.24.0",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-watch": "^7.0.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VianneyR4/Free_mentors.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VianneyR4/Free_mentors/issues"
+  },
+  "homepage": "https://github.com/VianneyR4/Free_mentors#readme"
+}
+
+
+
+npm install bcrypt chai chai-http config dotenv eslint joi jsonwebtoken mocha
+
+npm install --save-dav babel-cli babel-preset-env babel-watch eslint-config-airbnb eslint-config-airbnb-base eslint-plugin-import
