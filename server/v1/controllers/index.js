@@ -123,6 +123,62 @@ const controller = {
     });
   },
   
+  specific_mentor(req, res) {
+    const thismentors = data_storage.selectMentorByParams(req, res);
+
+    if (!thismentors) {
+      res.status(401)
+        .send({
+          status: 401,
+          message: 'The mentor with the given ID was not found',
+        });
+    } else {
+      res.status(200)
+        .send({
+          status: 200,
+          message: 'User connected successfully',
+          thismentors,
+        });
+    }
+  },
+
+
+  requestMS(req, res) {
+    const menteeForMS = data_storage.findIdUser(req, res);
+    if (menteeForMS) {
+      const validDataForMS = {
+        mentorId: Joi.string().min(1).required(),
+        question: Joi.string().min(6).max(64).required(),
+      };
+      const result = Joi.validate(req.body, validDataForMS);
+      if (result.error) {
+        res.status(400)
+          .send({
+            status: 400,
+            error: result.error.details[0].message,
+          });
+        return;
+      }
+      const mentorForMS = data_storage.selectMentorByBody(req, res);
+      if (!mentorForMS) {
+        res.status(404)
+          .send({
+            status: 404,
+            message: 'The mentor with the given ID was not found',
+          });
+      } else {
+        data_storage.saveMS(req, res, menteeForMS);
+      }
+    } else {
+      res.status(401)
+        .send({
+          status: 401,
+          error: 'The user with the given ID was not found!',
+        });
+    }
+  },
+
+  
 };
 
 export default controller;
