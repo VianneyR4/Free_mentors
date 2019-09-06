@@ -214,6 +214,20 @@ const controller = {
     }
   },
 
+  usersViewAllMSR(req, res) {
+    const verifUserExist = data_storage.findIdUser(req);
+    if (verifUserExist) {
+      const viewMyMSR = data_storage.selectAllMSR_forUser(req);
+      res.status(200).send({ status: 200, message: 'User All Mentorship session request', viewMyMSR });
+    } else {
+      res.status(404)
+        .send({
+          status: 404,
+          message: 'The user with the given ID was not found',
+        });
+    }
+  },
+
 };
 
 export default controller;
